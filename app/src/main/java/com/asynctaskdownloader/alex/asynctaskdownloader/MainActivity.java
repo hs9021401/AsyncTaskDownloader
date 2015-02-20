@@ -38,7 +38,7 @@ public class MainActivity extends ActionBarActivity {
     //[公用] 圖片資料夾位址
     static final File publicPicFolder = Environment.getExternalStoragePublicDirectory(Environment.DIRECTORY_PICTURES);
     static final File customCreateFolder = new File(publicPicFolder, "MyPicFolder");
-    static final String HelloGitHub = "Hi";
+
 
     Button btnDownload, btnReadPic, btnOpenExplorer;
     TextView txtNumOfDownload;
