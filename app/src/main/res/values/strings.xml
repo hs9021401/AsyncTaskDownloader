@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">AsyncTaskDownloader</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_maps">KaiMap</string>
+    <string name="download">Download</string>
+    <string name="readpic">Read Picture</string>
+    <string name="openexplorer">Open Explorer</string>
+
+</resources>
