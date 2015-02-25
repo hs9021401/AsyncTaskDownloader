@@ -148,7 +148,8 @@ public class MainActivity extends ActionBarActivity {
                     long total = 0;
                     while ((count = input.read(data)) != -1) {
                         total += count;
-                        publishProgress((int) ((total * 100) / lenghtOfFile), i+1, params.length);  //可帶入多個參數, 第一個參數為下載百分比, 第2.3是顯示下載進度用
+                        //可帶入多個參數, 下例：第一個參數為下載百分比, 第二，三參數為顯示下載進度(已下載數/總任務數)
+                        publishProgress((int) ((total * 100) / lenghtOfFile), i+1, params.length);
                         output.write(data, 0, count);
                     }
                     output.flush();
