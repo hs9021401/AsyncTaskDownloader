@@ -69,8 +69,8 @@ public class MainActivity extends ActionBarActivity {
             public void onClick(View v) {
                 //待下載的圖片URL
                 String img_url1 = "http://crackberry.com/sites/crackberry.com/files/styles/large/public/topic_images/2013/ANDROID.png";
-                String img_url2 = "http://upload.wikimedia.org/wikipedia/commons/9/92/Canon_EOS_500d_voorzijde.jpg";
-                String img_url3 = "http://twimg.edgesuite.net//images/twapple/640pix/20150215/RN03/RN03_002.jpg";
+                String img_url2 = "http://d.blog.xuite.net/d/0/b/e/238561270/blog_3571718/txt/205236449/0.jpg";
+                String img_url3 = "http://www.worldfortravel.com/wp-content/uploads/2015/02/Eiffel-Tower-France.jpg";
 
                 /// /取得系統資訊的網路狀態
                 ConnectivityManager mConnMgr = (ConnectivityManager)getSystemService(Context.CONNECTIVITY_SERVICE);
@@ -89,7 +89,7 @@ public class MainActivity extends ActionBarActivity {
             @Override
             public void onClick(View v) {
                 if(spPicList.getSelectedItem() == null) {
-                    Toast.makeText(MainActivity.this, "請選擇圖片再按好嗎?", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "請選擇圖片", Toast.LENGTH_SHORT).show();
                     return;
                 }
 
@@ -139,7 +139,7 @@ public class MainActivity extends ActionBarActivity {
                     URLConnection conection = url.openConnection();
                     conection.connect();
                     int lenghtOfFile = conection.getContentLength();
-                    InputStream input = new BufferedInputStream(url.openStream(), 8192);
+                    InputStream input = new BufferedInputStream(url.openStream());
 
                     String timestamp = new SimpleDateFormat("yyyyMMdd_HHmmss", Locale.TAIWAN).format(new Date());
                     OutputStream output = new FileOutputStream(customCreateFolder + "/" + timestamp + ".jpg");
